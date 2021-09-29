@@ -1,5 +1,6 @@
 import Navbar from './Component/Navbar';
 import Home from './Component/Home'
+import About from './Component/About'
 import './App.css';
 
 
@@ -9,7 +10,8 @@ function App() {
     <div >
       <Navbar />
       <Home />
-      <h1>Hello from React 201</h1>
+      <About />
+    
     </div>
   );
 }
