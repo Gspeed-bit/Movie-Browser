@@ -2,21 +2,21 @@ import Navbar from './Component/Navbar';
 import Home from './Component/SearchView'
 import About from './Component/About'
 import './App.css';
-import {useState, useEffect} from "react"
+import {useState, useEffect,useRef} from "react"
 import SearchView from './Component/SearchView'
 import {Switch,Route} from "react-router-dom"
 
 
 function App() {
 
-
+  
 const [searchResults, setSearchResults] = useState([])
 const [searchText, setSearchText ] = useState("")
 
 
   return (
     <div >
-      <Navbar />
+      <Navbar searchText={searchText} setSearchText={setSearchText}/>
         <Switch>
           <Route path="/" exact>
             <Home />

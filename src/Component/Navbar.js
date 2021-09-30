@@ -1,7 +1,24 @@
 import React from "react";
+import {useRef} from "react";
 import { Link } from "react-router-dom";
 
-export default function Navbar() {
+export default function Navbar({searchText, setSearchText}) {
+
+    const searchTextRef = useRef(null);
+
+
+function updatedSearchText (){
+        setSearchText(searchTextRef.current.value)
+        console.log(searchText)
+
+
+}
+
+function handleSubmit(e){
+    e.preventDefault()
+}
+
+
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -44,8 +61,14 @@ export default function Navbar() {
                 type="search"
                 placeholder="Search"
                 aria-label="Search"
+                name="searchText"
+                onChange={updatedSearchText}
+                ref={searchTextRef}
+               
               />
-              <button className="btn btn-outline-success" type="submit">
+              <button onClick={handleSubmit} className="btn btn-outline-success" type="submit"
+                
+              >
                 Search
               </button>
             </form>
