@@ -1,9 +1,10 @@
-import React from 'react'
+import React from "react";
+import Hero from "./Hero";
 
 export default function Home() {
-    return (
-        <div>
-           <h1>Hello from React 201</h1>
-        </div>
-    )
+  return (
+    <div>
+      <Hero text="Welcome to React 201" />
+    </div>
+  );
 }

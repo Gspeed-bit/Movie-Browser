@@ -1,9 +1,11 @@
 import React from 'react'
+import Hero from './Hero'
+
 
 export default function About() {
     return (
         <div>
-            <h2>About us</h2>
+               <Hero text="About Us" />
         </div>
     )
 }
