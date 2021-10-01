@@ -13,7 +13,7 @@ function App() {
 const [searchResults, setSearchResults] = useState([])
 const [searchText, setSearchText ] = useState("")
 
-
+console.log(searchText)
   return (
     <div >
       <Navbar searchText={searchText} setSearchText={setSearchText}/>
@@ -25,7 +25,7 @@ const [searchText, setSearchText ] = useState("")
             <About />
           </Route>
           <Route path="/search">
-            <SearchView keyWord ={searchText} searchOutput={searchResults}/>
+            <SearchView inputText ={searchText} setSearchText={setSearchText}/>
           </Route>
          </Switch>
         

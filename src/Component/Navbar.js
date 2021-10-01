@@ -1,21 +1,19 @@
 import React from "react";
+
 import {useRef} from "react";
 import { Link } from "react-router-dom";
 
 export default function Navbar({searchText, setSearchText}) {
-
     const searchTextRef = useRef(null);
+// function updatedSearchText (e){
+//         setSearchText(e.target.value)
+     
+// }
 
 
 function updatedSearchText (){
         setSearchText(searchTextRef.current.value)
         console.log(searchText)
-
-
-}
-
-function handleSubmit(e){
-    e.preventDefault()
 }
 
 
@@ -66,7 +64,7 @@ function handleSubmit(e){
                 ref={searchTextRef}
                
               />
-              <button onClick={handleSubmit} className="btn btn-outline-success" type="submit"
+              <button className="btn btn-outline-success" type="submit"
                 
               >
                 Search
