@@ -1,21 +1,21 @@
 import React from "react";
-import {useRef} from "react";
-import { Link } from "react-router-dom";
+
+import { useHistory, Link } from "react-router-dom";
+
 
 export default function Navbar({searchText, setSearchText}) {
+ 
 
-    const searchTextRef = useRef(null);
+  const history = useHistory()
 
-
-function updatedSearchText (){
-        setSearchText(searchTextRef.current.value)
-        console.log(searchText)
-
-
+function updatedSearchText (e){
+  history.push("/search")
+  setSearchText(e.target.value)
 }
 
+
 function handleSubmit(e){
-    e.preventDefault()
+  
 }
 
 
@@ -63,7 +63,7 @@ function handleSubmit(e){
                 aria-label="Search"
                 name="searchText"
                 onChange={updatedSearchText}
-                ref={searchTextRef}
+                value={searchText}
                
               />
               <button onClick={handleSubmit} className="btn btn-outline-success" type="submit"
