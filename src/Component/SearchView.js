@@ -1,7 +1,7 @@
 import React from "react";
 import Hero from "./Hero";
 
-export default function SearchView({inputText, setSearchText}) { //
+export default function SearchView({inputText, searchResults}) { //
   const title = `You are searching for ${inputText}`
 console.log(inputText)
   return (

@@ -7,7 +7,6 @@ export default function Navbar({searchText, setSearchText}) {
     const searchTextRef = useRef(null);
 // function updatedSearchText (e){
 //         setSearchText(e.target.value)
-     
 // }
 
 

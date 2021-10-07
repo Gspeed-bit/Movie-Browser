@@ -1,5 +1,4 @@
 import Navbar from './Component/Navbar';
-import Home from './Component/SearchView'
 import About from './Component/About'
 import './App.css';
 import {useState, useEffect,useRef} from "react"
@@ -11,7 +10,7 @@ function App() {
 
   
 const [searchResults, setSearchResults] = useState([])
-const [searchText, setSearchText ] = useState("")
+const [searchText, setSearchText ] = useState(" ")
 
 console.log(searchText)
   return (
@@ -19,13 +18,10 @@ console.log(searchText)
       <Navbar searchText={searchText} setSearchText={setSearchText}/>
         <Switch>
           <Route path="/" exact>
-            <Home />
+          <SearchView inputText ={searchText} searchResults={searchResults}/>
           </Route>
           <Route path="/about">
             <About />
-          </Route>
-          <Route path="/search">
-            <SearchView inputText ={searchText} setSearchText={setSearchText}/>
           </Route>
          </Switch>
         
