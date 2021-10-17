@@ -24,14 +24,17 @@ export default function MovieView() {
         } 
         if(movieDetails){
       const posterPath = `https://image.tmdb.org/t/p/w500${movieDetails.poster_path}`
+      const backdropUrl = `https://image.tmdb.org/t/p/original${movieDetails.backdrop_path}`
 
       return(
           <div>
-          <Hero text={movieDetails.original_title} />
+          <Hero text={movieDetails.original_title} backdrop={backdropUrl}/>
         <div className="container my-5"> 
                 <div className="row"> 
                     <div className="col-md-3"> 
+                    {posterPath && 
                 <img src={posterPath} alt="..." className="img-fluid shadow rounded" />
+                    }
                     </div>
                 <div className="col-md-9"> 
                     <h2>{movieDetails.original_title}</h2>
