@@ -6,6 +6,7 @@ import MovieView from './Component/MovieView';
 import {useState, useEffect} from "react"
 import SearchView from './Component/SearchView'
 import {Switch,Route} from "react-router-dom"
+import NotFound from './Component/NotFound';
 
 
 function App() {
@@ -43,6 +44,9 @@ useEffect(()=>{
           </Route>
           <Route path="/movies/:id">
             <MovieView />
+            </Route>
+            <Route path="*">
+              <NotFound/>
             </Route>
          </Switch>
 

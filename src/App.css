@@ -18,3 +18,36 @@
     background-position: center center;
     opacity: 0.5;
 }
+
+/* error page 404 */
+
+.error-page{
+    margin: 0 auto;
+    width: 80%;
+    font-family: Adobe Caslon,Georgia,Times New Roman,Times,serif;
+    text-align: center;
+    font-size: 12px;
+}
+.error-page > h2{
+    font-size: 4em;
+  
+}
+.ErrorPage__message{
+   font-size: 20px;
+   color: black;
+}
+.ErrorPage__message_link{
+text-decoration: underline;
+ 
+}
+
+.img-link img{
+    max-width: 80%;
+    border-radius: 5%;
+    
+}
+.button{
+    margin-top: 3px;
+    padding: 10px;
+    
+}
