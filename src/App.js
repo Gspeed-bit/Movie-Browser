@@ -2,7 +2,8 @@ import Navbar from './Component/Navbar';
 import Home from './Component/Home'
 import About from './Component/About'
 import './App.css';
-import {useState, useEffect,useRef} from "react"
+import MovieView from './Component/MovieView';
+import {useState, useEffect} from "react"
 import SearchView from './Component/SearchView'
 import {Switch,Route} from "react-router-dom"
 
@@ -40,6 +41,9 @@ useEffect(()=>{
           <Route path="/search">
             <SearchView keyWord ={searchText} searchResults={searchResults}/>
           </Route>
+          <Route path="/movies/:id">
+            <MovieView />
+            </Route>
          </Switch>
 
       
